@@ -1,0 +1,22 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name localhost;
+	
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+
+	location / {
+		root /usr/share/nginx/html;
+		index index.html index.htm;
+	}
+
+	location /eval {
+        proxy_pass http://${API_URL}:5000;
+	}
+
+}

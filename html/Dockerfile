@@ -1,0 +1,5 @@
+FROM nginx
+
+COPY ./default.conf.template /etc/nginx/templates/default.conf.template
+
+RUN service nginx restart
