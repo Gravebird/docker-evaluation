@@ -11,6 +11,4 @@ RUN pip3 install flask
 
 EXPOSE 5000
 
-ENTRYPOINT ["echo", "${STUDENT_NAME}\n${STUDENT_ID}", ">", "student.txt"]
-
-CMD python web.py
+ENTRYPOINT ["./start.sh"]
