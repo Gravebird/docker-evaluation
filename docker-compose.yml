@@ -6,5 +6,11 @@ services:
     image: gravebird/eval4640-app:latest
     env_file:
       - variables.env
+    ports:
+      - 5000:5000
   web:
     image: gravebird/eval4640-web:latest
+    env_file:
+      - variables.env
+    ports:
+      - 12345:80

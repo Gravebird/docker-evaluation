@@ -7,8 +7,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip3 install flask && echo "${STUDENT_NAME}\n${STUDENT_ID}" > student.txt
+RUN pip3 install flask
 
 EXPOSE 5000
 
-CMD ["python", "web.py"]
+CMD echo "${STUDENT_NAME}\n${STUDENT_ID}" > student.txt
+
+ENTRYPOINT ["python", "web.py"]
