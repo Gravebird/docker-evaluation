@@ -14,12 +14,8 @@ server {
 		index index.html index.htm;
 	}
 
-	location /eval/json {
-        proxy_pass http://${API_URL}:5000/eval/json;
+	location /eval {
+        proxy_pass http://${API_URL}:5000/eval;
 	}
-
-    location /eval/image {
-        proxy_pass http://${API_URL}:5000/eval/image;
-    }
 
 }
