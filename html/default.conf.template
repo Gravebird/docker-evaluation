@@ -3,8 +3,6 @@ server {
 	listen [::]:80;
 
 	server_name localhost;
-	
-    root /www/data
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
