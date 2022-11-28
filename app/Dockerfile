@@ -7,7 +7,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip3 install flask && chmod 755 ./start.sh
+RUN pip3 install flask
+
+USER root
+RUN chmod 755 ./start.sh
+USER backend
 
 EXPOSE 5000
 
