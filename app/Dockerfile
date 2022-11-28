@@ -9,4 +9,6 @@ COPY . .
 
 RUN pip3 install flask && echo "${STUDENT_NAME}\n${STUDENT_ID}" > student.txt
 
+EXPOSE 5000
+
 CMD ["python", "web.py"]

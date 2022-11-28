@@ -1,5 +1,8 @@
 FROM nginx
 
-COPY ./default.conf.template /etc/nginx/templates/default.conf.template
+WORKDIR /tmp
+
+COPY . .
+RUN mv ./default.conf.template /etc/nginx/templates/default.conf.template
 
 RUN service nginx restart
