@@ -18,8 +18,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push app
         uses: docker/build-push-action@v3
         with:
+          context: app/
+          push: true
+          tags: gravebird/eval4640-app:latest
+      -
+        name: Build and push web
+        uses: docker/build-push-action@v3
+        with:
+          context: html/
           push: true
           tags: gravebird/eval4640-web:latest
