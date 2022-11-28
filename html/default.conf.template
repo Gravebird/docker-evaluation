@@ -10,7 +10,7 @@ server {
 	server_name _;
 
 	location / {
-		root /usr/share/nginx/html;
+		root /src;
 		index index.html index.htm;
 	}
 

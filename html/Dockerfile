@@ -1,9 +1,9 @@
 FROM nginx
 
-WORKDIR /tmp
+WORKDIR /src
 
-COPY ./index.html /usr/share/nginx/html/index.html
-COPY ./static /usr/share/nginx/html/static
+COPY ./index.html /src/index.html
+COPY ./static /src/static
 COPY ./default.conf.template /etc/nginx/templates/default.conf.template
 
 RUN service nginx restart
